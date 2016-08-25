@@ -1,0 +1,125 @@
+#These instructions will help you set up your code from your diagram.
+#If you got to code in scratch first, copy your coordinates AND G0/G1 instructions from scratch by retyping.
+#If this is the first time you have entered the coordinates, Where there is a lowercase x, substitute the x value from your (x,y) coordinate and where there is a lowercase y, substitute the y value from your (x,y) coordinate.
+
+#G1 means cut a straight line from the current coordinate (on the above line) to the indicated X_ Y_ coordinate (on this line). 
+#G0 means go to the indicated coordinate without cutting.
+#Read and follow # instructions to enter your coordinates.
+
+#To cut out the outline of your coaster (if you got fancy here, you'll need to work it out yourself)
+
+G0 X0 Y0
+G1 X80 Y0
+G1 X80 Y80
+G1 X0 Y80
+G1 X0 Y0
+
+# Note that whenever you draw a cut out shape, it will have a G0 followed by enough G1 lines to match the number of corners in the cut out.
+#Select a cut-out section in your coaster to be shape 1. This will be like drawing the individaul shapes in Scratch.
+#Select a corner of your cut out to start at. Mark it on your design. eg (x,y) is start point for shape.
+
+G0 X4 Y4
+
+#Select a second corner you can reach via a straight line. Mark it on your design. eg Second (x,y) - DIFFERENT FROM ABOVE
+
+G1 X4 Y10
+
+#Select the next corner you can reach via a straight line. Mark it too. Third corner (x,y)
+
+G1 X10 Y4
+G1 X4 Y4
+G0 X4 Y20
+
+G1 X4 Y30
+G1 X30 Y4
+G1 X20 Y4
+G1 X4 Y20
+
+G0 X6 Y38
+G1 X16 Y38
+G1 X38 Y16
+G1 X38 Y6
+G1 X6 Y38
+
+G0 X4 Y76
+G1 X10 Y76
+G1 X4 Y70
+G1 X4 Y76
+
+G0 X4 Y60
+G1 X20 Y76
+G1 X30 Y76
+G1 X4 Y50
+G1 X4 Y60
+
+G0 X6 Y42
+G1 X38 Y74
+G1 X38 Y64
+G1 X16 Y42
+G1 X6 Y42
+
+G0 X76 Y76
+G1 X76 Y70
+G1 X70 Y76
+G1 X76 Y76
+
+G0 X76 Y60
+G1 X76 Y50
+G1 X50 Y76
+G1 X60 Y76
+G1 X76 Y60
+
+G0 X74 Y42
+G1 X64 Y42
+G1 X42 Y64
+G1 X42 Y74
+G1 X74 Y42
+
+G0 X76 Y4
+G1 X70 Y4
+G1 X76 Y10
+G1 X76 Y4
+
+G0 X76 Y20
+G1 X60 Y4
+G1 X50 Y4
+G1 X76 Y30
+G1 X76 Y20
+
+G0 X74 Y38
+G1 X42 Y6
+G1 X42 Y16
+G1 X64 Y38
+G1 X74 Y38
+
+G0 X38 Y26
+G1 X26 Y38
+G1 X36 Y38
+G1 X38 Y36
+G1 X38 Y28
+
+G0 X26 Y42
+G1 X38 Y54
+G1 X38 Y44
+G1 X36 Y42
+G1 X26 Y42
+
+G0 X42 Y54
+G1 X54 Y42
+G1 X44 Y42
+G1 X42 Y44
+G1 X42 Y54
+
+G0 X42 Y26
+G1 X42 Y34
+G1 X44 Y38
+G1 X54 Y38
+G1 X42 Y26
+
+#Keep going till you reach the original starting G0 coordinate for this shape. That means the final G1 Xx Yy will match the x adn y for G0.
+
+#Repeat for all shapes. Note if you have a one dimensional line, it just has two corners (called vertices) and so will only require a G0 and one G1
+# So your next step is to pick a starting coordinate of another shape in your design.
+
+#Comment what you're up to as you go, so you know exactly where you are at. It may help to state the first coordinate for the shape on your drawing, or even list them all in order, too.
+#Once EVERYTHING is finished, we will tidy up ready for ERIC to cut it out.
