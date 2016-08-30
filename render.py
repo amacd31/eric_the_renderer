@@ -24,8 +24,18 @@ def render(data_file, axis_max = None, line_thickness = 1):
     )
 
     # Remove the X/Y in front of the number and tell Python it is a number
-    data.x = data.x.apply(lambda x: float(x.replace('X', '')))
-    data.y = data.y.apply(lambda y: float(y.replace('Y', '')))
+    def __parse_col(x):
+        if x is np.nan or x.startswith('Z'):
+            return None
+        elif x.startswith('X'):
+            return float(x.replace('X', ''))
+        elif x.startswith('Y'):
+            return float(x.replace('Y', ''))
+        else:
+            raise ValueError("Unknown column value: {0}".format(x))
+
+    data.x = data.x.apply(__parse_col)
+    data.y = data.y.apply(__parse_col)
 
     # Create a plot figure that is 8 inches by 8 inches
     fig, ax = plt.subplots(figsize=(8, 8))
